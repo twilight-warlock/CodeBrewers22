@@ -13,7 +13,7 @@ class App extends React.Component {
 		let data
 
 		axios
-			.get("http://localhost:8000/sample/")
+			.get("http://localhost:8000/api/sample/")
 			.then((res) => {
 				data = res.data
 				this.setState({

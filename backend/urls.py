@@ -3,6 +3,6 @@ from rest_framework import routers
 from .views import *
 
 router = routers.DefaultRouter()
-router.register(r"sample", SampleView)
+router.register(r"api/sample", SampleView)
 
-urlpatterns = router.urls
+urlpatterns = [path("", Index.as_view(), name="index")] + router.urls
